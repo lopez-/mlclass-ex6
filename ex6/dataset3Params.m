@@ -23,8 +23,7 @@ sigma = 0.01;
 %        mean(double(predictions ~= yval))
 %
 
-% for c = 1:10
-for c = 1:2
+for c = 1:8
 
   if (c==1)
       C = 0.01;
@@ -34,8 +33,7 @@ for c = 1:2
       C = C/3*10;
   end
   
-  % for s = 1:10
-  for s = 1:2
+  for s = 1:8
   
       if (s==1)
             sigma = 0.01;
@@ -60,8 +58,8 @@ end
 
 optims = optimMatrix(optimMatrix(:,3)==min(optimMatrix(:,3)),:);
 
-C = optims(1);
-sigma = optims(2);
+C = optims(1)
+sigma = optims(2)
 
 
 % =========================================================================
